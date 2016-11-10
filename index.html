@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+ <html ng-app="M1">
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/youyue.css" />
+		<link rel="stylesheet" href="css/s1.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+		 
+</head>
+<body ng-controller="parentCtrl">
+<div class="myTpl wrapper" ng-view=""></div>
+<!--<script src="js/json2.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="js/angular.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/angular-animate.js"></script>
+<script>
+    angular.module("M1", ['ng', 'ngRoute', 'ngAnimate'])
+            .config(function ($routeProvider) {
+                $routeProvider
+                        .when('/a1', {templateUrl: 'tpl/index.html', controller: 'C1'})
+                        .when('/book', {templateUrl: 'tpl/book.html', controller: 'bookC'})
+                        .when('/top', {templateUrl: 'tpl/top.html', controller: 'topC'})
+                        .when('/pay', {templateUrl: 'tpl/pay.html', controller: 'payC'})
+                        .when('/detail', {templateUrl: 'tpl/detail.html', controller: 'detailC'})
+                        .when('/detail:did', {templateUrl: 'tpl/detail.html', controller: 'detailC'})
+                        .when('/read', {templateUrl: 'tpl/read1.html', controller: 'read1C'})
+                        .when('/login', {templateUrl: 'tpl/login.html', controller: 'loginC'})
+                        .when('/register', {templateUrl: 'tpl/register.html', controller: 'registerC'})
+                        .when('/userCenter', {templateUrl: 'tpl/userCenter.html', controller: 'userCenterC'})
+                        .otherwise({redirectTo: '/a1'})
+            })
+            .controller('parentCtrl', function ($scope,$location) {
+                $scope.jump=function(url){
+                    $location.path(url);
+                    window.scrollTo(0, 1);
+                }
+            })
+            .controller('C1', function ($scope, $location) {
+                $scope.arrs=[
+                    {did:1,img_sm:'10189s',name:'不良婚约',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',color:'blues',title:'现代言情',date:'07-14 22:41',num:170.3},
+                    {did:2,img_sm:'10022s',name:'首席娇妻太撩人',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',color:'pink',title:'古代言情',date:'07-14 22:41',num:170.3},
+                    {did:3,img_sm:'10186s',name:'艳鬼狂情',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',color:'yellow',title:'豪门总裁',date:'07-14 22:41',num:170.3},
+                    {did:4,img_sm:'10191s',name:'艳鬼狂情',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',color:'blues',title:'灵异其他',date:'07-14 22:41',num:170.3}
+                ];
+                $scope.arrs1=[
+                    {did:5,img_sm:'10189s',name:'溺宠成瘾：早安，老公大人',cate:'都市高干',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3},
+                    {did:6,img_sm:'10022s',name:'穆少逼婚：宝贝乖乖入我怀',cate:'总裁豪门',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3},
+                    {did:7,img_sm:'10186s',name:'枭宠千金：纯禽老公轻轻亲',cate:'总裁豪门',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3}
+                ];
+            })
+            .controller('bookC', function ($scope, $routeParams) {
+            })
+            .controller('topC', function ($scope, $routeParams) {
+            })
+            .controller('payC', function ($scope, $routeParams) {
+            })
+            .controller('detailC', function ($scope, $routeParams) {
+                console.log($routeParams.did);
+
+                $scope.arrs=[
+                    {did:1,img_sm:'10189s',name:'不良婚约',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3,state:'连载中',
+                        articleList:[
+                            {arth:'一',artn:'夜雨劫持'},
+                            {arth:'二',artn:'不安'},
+                            {arth:'三',artn:'没名没分'},
+                            {arth:'四',artn:'戳瞎'},
+                            {arth:'五',artn:'我看上你了'}
+                        ]
+
+                    },
+                    {did:2,img_sm:'10022s',name:'首席娇妻太撩人',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3,state:'连载中',
+                        articleList:[
+                            {arth:'一',artn:'夜雨劫持'},
+                            {arth:'二',artn:'不安'},
+                            {arth:'三',artn:'没名没分'},
+                            {arth:'四',artn:'戳瞎'},
+                            {arth:'五',artn:'我看上你了'}
+                        ]
+
+                    },
+                    {did:3,img_sm:'10186s',name:'艳鬼狂情',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3,state:'连载中',
+                        articleList:[
+                            {arth:'一',artn:'夜雨劫持'},
+                            {arth:'二',artn:'不安'},
+                            {arth:'三',artn:'没名没分'},
+                            {arth:'四',artn:'戳瞎'},
+                            {arth:'五',artn:'我看上你了'}
+                        ]
+
+                    },
+                    {did:4,img_sm:'10191s',name:'艳鬼狂情',cate:'青春校园',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3,state:'连载中',
+                        articleList:[
+                            {arth:'一',artn:'夜雨劫持'},
+                            {arth:'二',artn:'不安'},
+                            {arth:'三',artn:'没名没分'},
+                            {arth:'四',artn:'戳瞎'},
+                            {arth:'五',artn:'我看上你了'}
+                        ]
+
+                    },
+                    {did:5,img_sm:'10189s',name:'溺宠成瘾：早安，老公大人',cate:'都市高干',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3,state:'连载中',
+                        articleList:[
+                            {arth:'一',artn:'夜雨劫持'},
+                            {arth:'二',artn:'不安'},
+                            {arth:'三',artn:'没名没分'},
+                            {arth:'四',artn:'戳瞎'},
+                            {arth:'五',artn:'我看上你了'}
+                        ]
+
+                    },
+                    {did:6,img_sm:'10022s',name:'穆少逼婚：宝贝乖乖入我怀',cate:'总裁豪门',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3,state:'连载中',
+                        articleList:[
+                            {arth:'一',artn:'夜雨劫持'},
+                            {arth:'二',artn:'不安'},
+                            {arth:'三',artn:'没名没分'},
+                            {arth:'四',artn:'戳瞎'},
+                            {arth:'五',artn:'我看上你了'}
+                        ]
+
+                    },
+                    {did:7,img_sm:'10186s',name:'枭宠千金：纯禽老公轻轻亲',cate:'总裁豪门',detail:'  雨夜劫持，青梅竹马的丈夫搂着别的女人，对她置若罔闻。',date:'07-14 22:41',num:170.3,state:'连载中',
+                        articleList:[
+                            {arth:'一',artn:'夜雨劫持'},
+                            {arth:'二',artn:'不安'},
+                            {arth:'三',artn:'没名没分'},
+                            {arth:'四',artn:'戳瞎'},
+                            {arth:'五',artn:'我看上你了'}
+                        ]
+
+                    }
+                ];
+                $scope.book=$scope.arrs[$routeParams.did-1]
+            })
+            .controller('read1C', function ($scope, $routeParams) {
+
+            })
+            .controller('loginC', function ($scope, $routeParams) {
+            })
+            .controller('registerC', function ($scope, $routeParams) {
+            })
+            .controller('userCenterC', function ($scope, $routeParams) {
+            })
+
+
+
+</script>
+</body>
+</html>

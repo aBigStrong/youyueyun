@@ -1,0 +1,14 @@
+/*body {overflow:hidden;}*/
+/*.myTpl{*/
+  /*transition:all 5s linear;*/
+  /*position:absolute;*/
+  /*width:100%;*/
+/*}*/
+/*!*Ҫ�뿪��ngViewԪ�أ��տ�ʼ��ʽ*!*/
+/*.myTpl.ng-leave{left:0;}*/
+/*!*Ҫ�뿪��ngViewԪ�أ�����ʱ�����ʽ*!*/
+/*.myTpl.ng-leave-active{left:-100%;}*/
+/*!*Ҫ�����ngViewԪ�أ��տ�ʼ��ʽ*!*/
+/*.myTpl.ng-enter{left:100%;}*/
+/*!*Ҫ�����ngViewԪ�أ�����ʱ�����ʽ*!*/
+/*.myTpl.ng-enter-active{left:0;}*/

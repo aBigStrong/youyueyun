@@ -1,0 +1,109 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="section" ng-controller="bookC">
+  <div class="module" style="padding:10px">
+    <div class="module-hd"><h2>书库</h2></div>
+    <ul class="screening">
+      <li>
+        <span class="type">频道：</span>
+        <a href="#/detail1" class="current">男频</a>
+        <a href="#/detail1">女频</a>
+      </li>
+      <li>
+        <span class="type">分类：</span>
+        <a href="#/detail1" class="current">全部</a>
+
+        <a href="#/detail1">玄幻</a>
+
+        <a href="#/detail1">都市</a>
+
+        <a href="#/detail1">悬疑</a>
+
+        <a href="#/detail1">网游</a>
+
+        <a href="#/detail1">魔法</a>
+
+        <a href="#/detail1">武侠</a>
+
+        <a href="#/detail1">官场</a>
+
+        <a href="#/detail1">历史</a>
+
+      </li>
+      <li>
+        <span class="type">字数：</span>
+
+        <a href="#/detail1" class="current">全部</a>
+
+        <a href="#/detail1">30万以下</a>
+
+        <a href="#/detail1">30万-50万</a>
+
+        <a href="#/detail1">50万-100万</a>
+
+        <a href="#/detail1">100万-200万</a>
+
+        <a href="#/detail1">200万以上</a>
+
+      </li>
+      <li>
+        <span class="type">排序：</span>
+
+        <a href="#/detail1" class="current">默认</a>
+
+        <a href="#/detail1">字数</a>
+
+        <a href="#/detail1">点击</a>
+
+        <a href="#/detail1">收藏</a>
+
+        <a href="#/detail1">销量</a>
+
+      </li>
+      <!--<li>-->
+      <!--<span class="type">类型：</span>-->
+      <!--<a href="#/detail1" id="o0" class="current">不限</a><a-->
+      <!--a href="#/detail1" id="o1">免费作品</a><a-->
+      <!--a href="#/detail1" id="o2">VIP作品</a>-->
+      <!--</li>-->
+      <li>
+        <span class="type">状态：</span>
+
+        <a href="#/detail1" class="current">全部</a>
+
+        <a href="#/detail1">连载中</a>
+
+        <a href="#/detail1">已完成</a>
+
+      </li>
+    </ul>
+  </div>
+  <div class="module mt10">
+    <ul class="imgtextlist searchlist">
+
+      <li>
+        <a href="#/detail1" class="pic"><img src="./img/10023s.jpg"
+                                                                       alt="$articlerows[i].articlename"></a>
+
+        <p class="title"><a href="#/detail1" class="orange">豪门夜宴</a></p>
+
+        <p class="author">分类：玄幻修真</p>
+
+        <p class="intro"> 腹黑大灰狼溺宠可爱小猫咪，联手打怪兽升级过幸...</p>
+      </li>
+
+    </ul>
+
+    <div class="pages">
+      <a href="" class="prev">&lt;上一页</a>
+      <a href="#/detail1" class="next">下一页&gt;</a>
+
+      <div class="skip">
+        <form method="post" action="">
+          <input type="number" name="page" placeholder="1" value="1" min="1">
+          <input type="submit" value="跳转"><span><em class="f-color-red">1</em>/1</span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

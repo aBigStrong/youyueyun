@@ -1,0 +1,105 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="section" ng-controller="C1">
+    <div class="pd">
+        <form action="http://m.mmd6666.com/search/" method="post" data-name="search_form">
+            <div class="search">
+                <input type="submit" value="搜索" class="s-btn" data-act="search_sub">
+            </div>
+            <div class="textbox">
+                <input type="text" placeholder="输入关键字搜索" class="s-text" name="searchkey" value="" id="searchkey">
+            </div>
+        </form>
+    </div>
+    <div class="">
+        <div class="module mt10">
+            <div class="module-hd"><h2>热门推荐</h2></div>
+            <ul class="clearfix bookimglist">
+                <li ng-repeat="arr in arrs" ng-click="jump('/detail'+arr.did)">
+                    <a href="">
+                        <img ng-src="./img/{{arr.img_sm}}.jpg" alt="{{arr.name}}" class="pic">
+
+                        <p class="name">{{arr.name}}</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="booktextlist hottextlist">
+                <li ng-repeat="arr in arrs" ng-click="jump('/detail'+arr.did)">
+                    <a href="" class="name"><em
+                            class="gray">{{arr.name}}</em></a>
+                </li>
+            </ul>
+        </div>
+        <div class="module {{arr1.color}}" ng-repeat="arr1 in arrs">
+            <div class="module-hd"><h2>{{arr1.title}}</h2></div>
+            <ul class="imgtextlist">
+                <li ng-click="jump('/detail'+arr1.did)">
+                    <a href="" class="pic">
+                        <img
+                            ng-src="./img/{{arr1.img_sm}}.jpg" alt="{{arr1.name}}">
+                    </a>
+
+                    <p class="title"><a href="">{{arr1.name}}</a></p>
+
+                    <p class="author">分类：{{arr1.cate}}</p>
+
+                    <p class="intro"> {{arr1.detail}}</p>
+                </li>
+            </ul>
+            <ul class="rcmdtextlist mt10">
+
+                <li ng-repeat="arr2 in arrs1" ng-click="jump('/detail'+arr2.did)">
+                    <a href="" class="orange">[{{arr2.cate}}]</a>
+                    <a
+                        href="" class="gray9 ml5">{{arr2.name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="module blues">
+            <div class="module-hd"><h2>大神专区</h2></div>
+            <ul class="clearfix bookimglist">
+
+                <li ng-repeat="arr in arrs" ng-click="jump('/detail'+arr.did)">
+                    <a href="">
+                        <img ng-src="./img/{{arr.img_sm}}.jpg" alt="{{arr.name}}" class="pic">
+
+                        <p class="name">{{arr.name}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="module yellow">
+            <div class="module-hd"><h2>完本专区</h2></div>
+            <ul class="clearfix bookimglist">
+
+                <li ng-repeat="arr in arrs" ng-click="jump('/detail'+arr.did)">
+                    <a href="">
+                        <img ng-src="./img/{{arr.img_sm}}.jpg" alt="{{arr.name}}" class="pic">
+
+                        <p class="name">{{arr.name}}</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="module">
+            <div class="module-hd"><h2>最近更新</h2></div>
+            <ul class="booktextlist">
+                <li ng-repeat="arr in arrs" ng-click="jump('/detail'+arr.did)">
+                    <a href="" class="orange">[{{arr.cate}}]</a>
+                     <a href="" class="ml5 name">{{arr.name}}</a>
+                </li>
+                <li ng-repeat="arr1 in arrs1" ng-click="jump('/detail'+arr1.did)">
+                    <a href="" class="orange">[{{arr1.cate}}]</a><a
+                        href="" class="ml5 name">{{arr1.name}}</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!--<script src="./js/jquery-1.8.3.min.js"></script>-->
+    <!--<script src="./js/jquery.cookie.js"></script>-->
+    <!--<script src="./js/pagewap.js"></script>-->
+    <!--<script src="./js/layer.m.js"></script>-->
+    <!--<script src="./js/mod.wap.article.js"></script>-->
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,49 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="section" ng-controller="loginC">
+  <fieldset>
+    <legend>建议您用以下方式一键登录（点图标）</legend>
+    <div class="oauth">
+      <ul>
+        <li><a href="#/userCenter"
+               class="qq"> </a><span>QQ账号</span></li>
+        <li><a href="#/userCenter" class="wb"> </a><span>微博账号</span>
+        </li>
+        <li><a href="#/userCenter"
+               class="wx"> </a><span>微信账号</span></li>
+      </ul>
+    </div>
+  </fieldset>
+  <div class="module mod">
+    <div class="module-hd"><h2>或使用优阅小说账号登录</h2></div>
+    <div class="userform">
+      <form action="#/userCenter" method="post">
+        <div class="textboxl"><input type="text" placeholder="账号：个性账号/邮箱" class="user-text" name="username">
+        </div>
+        <div class="textboxl mt10"><input type="password" placeholder="密码：6-10位数字或者字母" class="user-text"
+                                          name="password"></div>
+        <div class="btnbox mt10"><input type="submit" value="立即登录" class="btn user-btn"></div>
+        <input type="hidden" name="jumpurl" id="jumpurl" value="http://m.mmd6666.com/">
+        <input type="hidden" name="ujumpurl" id="ujumpurl" value="http%3A%2F%2Fm.mmd6666.com%2F">
+        <input type="hidden" name="formhash" value="7ab14b8d">
+        <input type="hidden" name="usecookie" value="1">
+      </form>
+    </div>
+    <!--<div class="forgetpwd mt10"><a href="#" class="orange">忘记密码？</a></div>-->
+
+  </div>
+  <div class="remind mt10 mb10">
+    <h3>登录有问题，请尝试：</h3>
+
+    <p>1. 刷新重试一下；</p>
+
+    <p>2. 切换WIFI或3G/4G网络状态，重试下；</p>
+
+    <p>3. 清除浏览器Cookie，再次登录。</p>
+  </div>
+  <!--<fieldset>-->
+  <!--<legend>↓关注官方微信，方便下次阅读↓</legend>-->
+  <!--<p style="text-align:center;"><img src="./img/login/ykdw.jpg" alt="关注我们" style="width:80%;height:auto;"></p>-->
+  <!--<p style="text-align:center;">微信内可长按识别</p>-->
+  <!--</fieldset>-->
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

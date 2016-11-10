@@ -1,0 +1,45 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="section" ng-controller="payC">
+
+  <div class="pagetitle">账户：UFO，您的余额：<em class="orange">0</em>书币</div>
+
+  <!--<fieldset>-->
+  <!--<legend>温馨提示</legend>-->
+  <!--<p id="tip_info3" style="text-align:center;font-size:14px;color:#a44b3b;">支付失败怎么办？<span-->
+  <!--style="color:#799324;">点击这里查看帮助</span>。用浏览器打开就不影响啦~还搞不定？找客服！</p>-->
+  <!--</fieldset>-->
+  <div class="content2">
+    <p style="text-align:center;font-size:14px; margin-top:15px;">请点击以下图标选择支付方式</p>
+    <ul>
+
+      <li class="fl hot">
+        <img class="hots" src="./img/hotsicon.png" alt="hot">
+        <a href="#/userCenter"><img src="./img/zhifubao.jpg"
+                                  alt="支付宝图标"></a>
+
+        <p><a href="#/userCenter">支付宝</a></p>
+      </li>
+
+      <li class="fl hot">
+        <img class="hots" src="./img/hotsicon.png" alt="hot">
+        <a href="#/userCenter"><img src="./img/weixin.jpg"
+                                                       alt="微信支付图标"></a>
+
+        <p><a href="#/userCenter">微信支付</a></p>
+      </li>
+    </ul>
+  </div>
+  <fieldset>
+    <legend>温馨提示</legend>
+    <p style="font-size:14px;">如遇充值问题，请咨询客服<br>电话：<a href="#/userCenter">020-29899145</a><br>
+      QQ：2540999999<br></p>
+  </fieldset>
+  <!--<fieldset>-->
+  <!--<legend>↓关注官方微信，方便下次阅读↓</legend>-->
+  <!--<p style="text-align:center;"><img src="./img/chongzhi/ykdw.jpg" alt="关注我们"-->
+  <!--style="width:60%;height:auto;"></p>-->
+
+  <!--<p style="text-align:center;">微信内可长按识别</p>-->
+  <!--</fieldset>-->
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

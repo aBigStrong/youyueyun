@@ -1,0 +1,58 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="section" ng-controller="detailC">
+  <div class="mt20 mb10">
+    <div class="bookcover">
+      <div class="pic"><img ng-src="./img/{{book.img_sm}}.jpg" width="95" height="135" alt="{{book.name}}"></div>
+      <h1 class="title">{{book.name}}</h1>
+      <!--<p class="mt10 gray">莫萦&nbsp;著</p>-->
+      <p class="gray">分类：{{book.cate}}</p>
+
+      <p class="gray">更新：{{book.date}}<span class="ml10 num">{{book.num}}万字</span></p>
+      <span class="status is-finish">{{book.state}}<i></i></span>
+
+      <p class="gray" style="font-size:1.4rem">关注微信号“优阅小说”，方便下次阅读</p>
+    </div>
+    <table cellpadding="0" cellspacing="0" class="bookbutton mt10">
+      <tbody>
+      <tr>
+        <td>
+          <a href="#/read"+{{book.name}} class="bdbtn redbtn">开始阅读</a></td>
+        <!--<td class="spc"></td>-->
+        <!--<td><a href="login.html" class="bdbtn">追书</a></td>-->
+        <td class="spc"></td>
+        <td><a href="#/read" class="bdbtn">收藏本书</a></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="bookintro mt20">
+      <div class="hd">作品简介</div>
+      <div class="con gray">
+        {{book.detail}}
+      </div>
+    </div>
+  </div>
+  <div class="module">
+    <div class="module-hd"><h2>章节目录</h2></div>
+    <ul class="cataloglist">
+
+      <li ng-repeat="art in book.articleList">
+
+        <a href="#/read">
+          <span>第{{art.arth}}章&nbsp;&nbsp;{{art.artn}}</span>
+          <span class="time">更新：{{book.date}}</span>
+        </a>
+
+      </li>
+    </ul>
+    <div class="loading"><a href="#/read">查看更多章节</a></div>
+  </div>
+
+  <div class="module">
+    <div class="module-hd"><h2 class="fl">评论</h2><a href="#/read"
+                                                    class="fr writereview">发表评论</a></div>
+
+    <div class="loading mt10"><a href="#/read">查看更多评论</a></div>
+
+  </div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>
