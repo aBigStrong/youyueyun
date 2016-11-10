@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>components by vuejs</title>
+		<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+	</head>
+
+	<body>
+		<div class="vheader">
+			<div class="g-head">
+				<a href="index.html" class="m-logo">youyue小说云</a>
+				<ul class="m-nav f-fl u-menu-mobile" id="tool-nav">
+					<li>
+						<a v-link="{ path: '/'}">首页</a>
+					</li>
+				</ul>
+				<ul class="m-nav f-fl u-menu-mobile" id="main-nav">
+					<li>
+						<a v-link="{ path: '/user'}">用户管理 </a>
+					</li>
+
+					<li>
+						<a href="javascript:;">图书管理 </a>
+						<ul class="m-pulldown">
+							<li class="u-divider">
+								<a v-link="{ path: '/book'}">图书管理 </a>
+							</li>
+							<li class="u-divider">
+								<a v-link="{ path: '/picture'}">图片素材 </a>
+							</li>
+							<li class="u-divider">
+								<a v-link="{ path: '/title'}">标题素材 </a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a v-link="{ path: '/channel'}">渠道管理 </a>
+					</li>
+					<li>
+						<a v-link="{ path: '/put'}">推广管理 </a>
+					</li>
+					<li>
+						<a href="javascript:;">财务管理(￥000) </a>
+						<ul class="m-pulldown">
+							<li class="u-divider">
+								<a v-link="{ path: '/paydetail'}">充值明细</a>
+							</li>
+							<li class="u-divider">
+								<a v-link="{ path: '/pay'}">收款信息</a>
+							</li>
+							<li class="u-divider">
+								<a v-link="{ path: '/payout'}">提现功能</a>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+				<ul class="m-nav f-fr u-menu-mobile" id="tool-nav">
+					<li>
+						<a href="#">ABC</a>
+						<ul class="m-pulldown">
+							<li>
+								<a class="u-divider" href="#">安全退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="g-sidebar u-menu-mobile" id="sd-nav">
+				<ul>
+					<li>
+						<a href="#"> <span>优阅网络</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<router-view></router-view>
+		<script src="static/js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
